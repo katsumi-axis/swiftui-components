@@ -1,0 +1,11 @@
+*.app.dSYM.zip
+*.ipa
+xcuserdata/
+
+.swiftpm/
+.build
+/Package.resolved
+
+.vscode/
+
+.DS_Store

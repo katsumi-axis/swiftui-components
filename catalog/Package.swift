@@ -5,6 +5,12 @@ import PackageDescription
 let package = Package(
   name: "Frameworks",
   platforms: [
-    .iOS(.v14),
+    .iOS(.v14)
+  ],
+  products: [
+    .library(name: "HelloWorld", targets: ["HelloWorld"])
+  ],
+  targets: [
+    .target(name: "HelloWorld")
   ]
 )

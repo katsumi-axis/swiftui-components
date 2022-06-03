@@ -11,7 +11,7 @@ import SwiftUI
 struct catalogApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ComponentListView()
         }
     }
 }

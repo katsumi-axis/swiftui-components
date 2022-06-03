@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CB7234F1284A1CDB00ACD918 /* catalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7234E1284A1CDB00ACD918 /* catalogApp.swift */; };
-		CB7234F3284A1CDB00ACD918 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7234E2284A1CDB00ACD918 /* ContentView.swift */; };
+		CB7234F3284A1CDB00ACD918 /* ComponentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7234E2284A1CDB00ACD918 /* ComponentListView.swift */; };
 		CB7234F5284A1CDB00ACD918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7234E3284A1CDB00ACD918 /* Assets.xcassets */; };
+		CB991F39284A56560096A6C2 /* HelloWorld in Frameworks */ = {isa = PBXBuildFile; productRef = CB991F38284A56560096A6C2 /* HelloWorld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB7234E1284A1CDB00ACD918 /* catalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catalogApp.swift; sourceTree = "<group>"; };
-		CB7234E2284A1CDB00ACD918 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB7234E2284A1CDB00ACD918 /* ComponentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentListView.swift; sourceTree = "<group>"; };
 		CB7234E3284A1CDB00ACD918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB7234E8284A1CDB00ACD918 /* catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -24,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB991F39284A56560096A6C2 /* HelloWorld in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +37,7 @@
 			children = (
 				CB7234E0284A1CDB00ACD918 /* ios */,
 				CB7234E9284A1CDB00ACD918 /* Products */,
+				CB991F37284A56560096A6C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -42,7 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7234E1284A1CDB00ACD918 /* catalogApp.swift */,
-				CB7234E2284A1CDB00ACD918 /* ContentView.swift */,
+				CB7234E2284A1CDB00ACD918 /* ComponentListView.swift */,
 				CB7234E3284A1CDB00ACD918 /* Assets.xcassets */,
 			);
 			path = ios;
@@ -54,6 +57,13 @@
 				CB7234E8284A1CDB00ACD918 /* catalog.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CB991F37284A56560096A6C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,6 +83,9 @@
 			dependencies = (
 			);
 			name = "catalog (iOS)";
+			packageProductDependencies = (
+				CB991F38284A56560096A6C2 /* HelloWorld */,
+			);
 			productName = "catalog (iOS)";
 			productReference = CB7234E8284A1CDB00ACD918 /* catalog.app */;
 			productType = "com.apple.product-type.application";
@@ -147,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB7234F3284A1CDB00ACD918 /* ContentView.swift in Sources */,
+				CB7234F3284A1CDB00ACD918 /* ComponentListView.swift in Sources */,
 				CB7234F1284A1CDB00ACD918 /* catalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +360,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB991F38284A56560096A6C2 /* HelloWorld */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HelloWorld;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB7234DC284A1CDA00ACD918 /* Project object */;
 }

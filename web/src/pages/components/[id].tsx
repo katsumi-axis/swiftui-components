@@ -1,14 +1,20 @@
 import Header from '@/components/ui/header'
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Sidebar from '@/components/ui/sidebar'
 import Code from '@/components/ui/code'
-import Head from 'next/head'
 import CommonMeta from '@/utils/CommonMeta'
+import { Component } from '@/types/component'
 
-const Component: NextPage = () => {
+type Props = {
+    component: Component,
+    source: string
+}
+
+const ComponentView: NextPage<Props> = ({component, source}) => {
+
     return (
         <>
-             <CommonMeta />
+            <CommonMeta />
 
             <Header />
 
@@ -20,37 +26,15 @@ const Component: NextPage = () => {
                             className="p-2 font-sm text-base text-white"
                             style={{ background: '#1E1E1E' }}
                         >
-                            Component / HelloWorldView.swift
+                            Component / {component.name}
                         </div>
-                        <Code
-                            source={`
-//
-//  HelloWorld.swift
-//  
-//
-//  Created by Katsumi Furuta on 2022/06/03.
-//
-
-import SwiftUI
-
-public struct HelloWorldView: View {
-    public init() {}
-
-    public var body: some View {
-        Text("Hello, World!")
-    }
-}
-
-struct HelloWorldView_Previews: PreviewProvider {
-    static var previews: some View {
-         HelloWorldView()
-    }
-}
-              `}
-                        />
+                        <Code source={source} />
                     </div>
-                    <div className="w-1/2 min-h-full flex items-center justify-center" style={{ background: '#404040' }}>
-                        <img src="https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tests/SnapshotTests/__Snapshots__/SnapshotTests/testHelloWorldView.1.png" />
+                    <div
+                        className="w-1/2 min-h-full flex items-center justify-center"
+                        style={{ background: '#404040' }}
+                    >
+                        <img src={component.image} alt={component.name}/>
                     </div>
                 </div>
             </div>
@@ -58,4 +42,34 @@ struct HelloWorldView_Previews: PreviewProvider {
     )
 }
 
-export default Component
+export default ComponentView
+
+
+export const getStaticPaths = async () => {
+    const res = await fetch("https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tools/components.json");
+    const json = await res.json();
+    const paths = json.data.map((content: Component)  => `/components/${content.name}`);
+    return { paths, fallback: false };
+}
+
+type Params = {
+    params: {
+        id: string
+    }
+}
+
+
+export const getStaticProps = async ({ params }: Params) => {
+    const id = params.id;
+    const res = await fetch("https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tools/components.json")
+    const json = await res.json();
+    const component = json.data.find((d: Component) => d.name == id);
+    const source = await fetch(component.source).then(res => res.text());
+
+    return {
+        props: {
+            component: component,
+            source: source
+        }
+    }
+}

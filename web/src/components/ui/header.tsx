@@ -16,8 +16,24 @@ const Header = () => {
                         </Link>
 
                         <div className="hidden md:flex">
-                            <div className="text-sm px-2">Star us on GitHub</div>
-                            <div className="text-sm px-2">Contributor</div>
+                            <div className="text-sm px-2">
+                            <Link
+                                    href={
+                                        'https://github.com/katsumi-axis/swiftui-components/'
+                                    }
+                                >
+                                    <a>Star us on GitHub</a>
+                                </Link>
+                            </div>
+                            <div className="text-sm px-2">
+                                <Link
+                                    href={
+                                        'https://github.com/katsumi-axis/swiftui-components/graphs/contributors'
+                                    }
+                                >
+                                    <a>Contributor</a>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

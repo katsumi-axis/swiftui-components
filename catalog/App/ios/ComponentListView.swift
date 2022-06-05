@@ -5,8 +5,8 @@
 //  Created by Katsumi Furuta on 2022/06/03.
 //
 
-import SwiftUI
 import HelloWorld
+import SwiftUI
 
 struct ComponentListView: View {
     var body: some View {

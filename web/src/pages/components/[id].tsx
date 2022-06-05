@@ -1,6 +1,5 @@
 import Header from '@/components/ui/header'
 import type { GetStaticProps, NextPage } from 'next'
-import Sidebar from '@/components/ui/sidebar'
 import Code from '@/components/ui/code'
 import CommonMeta from '@/utils/CommonMeta'
 import { Component } from '@/types/component'
@@ -56,7 +55,7 @@ export const getStaticPaths = async () => {
         'https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tools/components.json'
     )
     const json = await res.json()
-    const paths = json.data.map((content: Component) => `/components/${content.name}`)
+    const paths = json.data.map((content: Component) => `/components/${content.name.toLowerCase()}`)
     return { paths, fallback: false }
 }
 
@@ -72,7 +71,7 @@ export const getStaticProps = async ({ params }: Params) => {
         'https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tools/components.json'
     )
     const json = await res.json()
-    const component = json.data.find((d: Component) => d.name == id)
+    const component = json.data.find((d: Component) => d.name.toLowerCase() == id)
     const source = await fetch(component.source).then((res) => res.text())
 
     return {

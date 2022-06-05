@@ -1,7 +1,7 @@
 {
     "data":[
        {
-          "name":"helloworld",
+          "name":"HelloWorld",
           "description":"HelloWorld",
           "creator": "katsumi",
           "image":"https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tests/SnapshotTests/__Snapshots__/SnapshotTests/testHelloWorldView.1.png",

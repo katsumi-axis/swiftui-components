@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB7234F1284A1CDB00ACD918 /* catalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7234E1284A1CDB00ACD918 /* catalogApp.swift */; };
+		CB7234F1284A1CDB00ACD918 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7234E1284A1CDB00ACD918 /* CatalogApp.swift */; };
 		CB7234F3284A1CDB00ACD918 /* ComponentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7234E2284A1CDB00ACD918 /* ComponentListView.swift */; };
 		CB7234F5284A1CDB00ACD918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7234E3284A1CDB00ACD918 /* Assets.xcassets */; };
 		CB991F39284A56560096A6C2 /* HelloWorld in Frameworks */ = {isa = PBXBuildFile; productRef = CB991F38284A56560096A6C2 /* HelloWorld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB7234E1284A1CDB00ACD918 /* catalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catalogApp.swift; sourceTree = "<group>"; };
+		CB7234E1284A1CDB00ACD918 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
 		CB7234E2284A1CDB00ACD918 /* ComponentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentListView.swift; sourceTree = "<group>"; };
 		CB7234E3284A1CDB00ACD918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB7234E8284A1CDB00ACD918 /* catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +44,7 @@
 		CB7234E0284A1CDB00ACD918 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				CB7234E1284A1CDB00ACD918 /* catalogApp.swift */,
+				CB7234E1284A1CDB00ACD918 /* CatalogApp.swift */,
 				CB7234E2284A1CDB00ACD918 /* ComponentListView.swift */,
 				CB7234E3284A1CDB00ACD918 /* Assets.xcassets */,
 			);
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7234F3284A1CDB00ACD918 /* ComponentListView.swift in Sources */,
-				CB7234F1284A1CDB00ACD918 /* catalogApp.swift in Sources */,
+				CB7234F1284A1CDB00ACD918 /* CatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

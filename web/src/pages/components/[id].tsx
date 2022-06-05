@@ -3,16 +3,14 @@ import type { NextPage } from 'next'
 import Sidebar from '@/components/ui/sidebar'
 import Code from '@/components/ui/code'
 import Head from 'next/head'
+import CommonMeta from '@/utils/CommonMeta'
 
 const Component: NextPage = () => {
     return (
         <>
+             <CommonMeta />
+
             <Header />
-
-            <Head>
-                <title>HelloWorldView - SwiftUI Component</title>
-            </Head>
-
 
             <div className="bg-zinc-800">
                 <div className="min-h-full container mx-auto flex">

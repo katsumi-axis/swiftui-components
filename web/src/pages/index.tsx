@@ -1,13 +1,12 @@
-import Header from '@/components/ui/header'
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import HomePage from '@/components/pages'
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <Header />
-    </>  
-  )
+    return (
+        <>
+            <HomePage />
+        </>
+    )
 }
 
 export default Home

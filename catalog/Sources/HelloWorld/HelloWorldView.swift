@@ -1,10 +1,3 @@
-//
-//  HelloWorld.swift
-//  
-//
-//  Created by Katsumi Furuta on 2022/06/03.
-//
-
 import SwiftUI
 
 public struct HelloWorldView: View {
@@ -17,6 +10,6 @@ public struct HelloWorldView: View {
 
 struct HelloWorldView_Previews: PreviewProvider {
     static var previews: some View {
-        HelloWorldView()
+        HelloWorldView().previewLayout(.sizeThatFits)
     }
 }

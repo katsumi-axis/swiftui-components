@@ -16,4 +16,9 @@
     ·
     <a href="https://github.com/katsumi-axis/swiftui-components/issues">Request Feature</a>
   </p>
+  
+  
+  <img src="images/screenshot.png" alt="Mock" width="452.6" height="280.6">
+
+
 </div>

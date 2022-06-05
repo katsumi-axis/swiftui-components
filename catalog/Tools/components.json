@@ -1,10 +1,10 @@
-[
-    [
-        {
-            "name": "HelloWorld",
-            "description": "HelloWorld",
-            "image": "",
-            "source": ""
-        }
+{
+    "data":[
+       {
+          "name":"helloworld",
+          "description":"HelloWorld",
+          "image":"https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tests/SnapshotTests/__Snapshots__/SnapshotTests/testHelloWorldView.1.png",
+          "source":"https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Sources/HelloWorld/HelloWorldView.swift"
+       }
     ]
-]
+ }

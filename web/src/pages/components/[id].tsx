@@ -5,7 +5,12 @@ import Code from '@/components/ui/code'
 import CommonMeta from '@/utils/CommonMeta'
 import { Component } from '@/types/component'
 
-const ComponentView: NextPage = ({component, source}) => {
+type Props = {
+    component: Component,
+    source: string
+}
+
+const ComponentView: NextPage<Props> = ({component, source}) => {
 
     return (
         <>
@@ -41,9 +46,8 @@ export default ComponentView
 
 
 export const getStaticPaths = async () => {
-    const res = await fetch("http://localhost:3000/mock.json");
+    const res = await fetch("https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tools/components.json");
     const json = await res.json();
-    console.log(json.data)
     const paths = json.data.map((content: Component)  => `/components/${content.name}`);
     return { paths, fallback: false };
 }
@@ -57,7 +61,7 @@ type Params = {
 
 export const getStaticProps = async ({ params }: Params) => {
     const id = params.id;
-    const res = await fetch(`http://localhost:3000/mock.json`)
+    const res = await fetch("https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tools/components.json")
     const json = await res.json();
     const component = json.data.find((d: Component) => d.name == id);
     const source = await fetch(component.source).then(res => res.text());

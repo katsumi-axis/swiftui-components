@@ -1,13 +1,11 @@
 import type { NextPage } from 'next'
 import HomePage from '@/components/pages'
-import Head from 'next/head'
+import CommonMeta from '@/utils/CommonMeta'
 
 const Home: NextPage = () => {
     return (
         <>
-            <Head>
-                <title>SwiftUI Component</title>
-            </Head>
+            <CommonMeta />
             <HomePage />
         </>
     )

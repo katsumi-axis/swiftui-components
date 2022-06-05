@@ -3,16 +3,14 @@ import type { NextPage } from 'next'
 import Sidebar from '@/components/ui/sidebar'
 import Code from '@/components/ui/code'
 import Head from 'next/head'
+import CommonMeta from '@/utils/CommonMeta'
 
 const Component: NextPage = () => {
     return (
         <>
+             <CommonMeta />
+
             <Header />
-
-            <Head>
-                <title>HelloWorldView - SwiftUI Component</title>
-            </Head>
-
 
             <div className="bg-zinc-800">
                 <div className="min-h-full container mx-auto flex">
@@ -51,7 +49,9 @@ struct HelloWorldView_Previews: PreviewProvider {
               `}
                         />
                     </div>
-                    <div className="w-1/2 min-h-full" style={{ background: '#404040' }}></div>
+                    <div className="w-1/2 min-h-full flex items-center justify-center" style={{ background: '#404040' }}>
+                        <img src="https://raw.githubusercontent.com/katsumi-axis/swiftui-components/main/catalog/Tests/SnapshotTests/__Snapshots__/SnapshotTests/testHelloWorldView.1.png" />
+                    </div>
                 </div>
             </div>
         </>

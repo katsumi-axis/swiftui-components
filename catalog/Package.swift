@@ -10,7 +10,15 @@ let package = Package(
   products: [
     .library(name: "HelloWorld", targets: ["HelloWorld"])
   ],
+  dependencies: [
+    .package(
+      name: "SnapshotTesting",
+      url: "https://github.com/pointfreeco/swift-snapshot-testing.git",
+      from: "1.9.0"
+    )
+  ],
   targets: [
-    .target(name: "HelloWorld")
+    .target(name: "HelloWorld"),
+    .testTarget(name: "SnapshotTests", dependencies: ["HelloWorld", "SnapshotTesting"])
   ]
 )

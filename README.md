@@ -9,13 +9,11 @@
   <p align="center">
     A repository of free components built with SwiftUI
     <br />
-    <a href=""><strong>Browes Components »</strong></a>
+    <a href="https://swiftui-components.vercel.app/"><strong>Browes Components »</strong></a>
     <br />
     <br />
     <a href="">How to contribute</a>
     ·
-    <a href="">Report Bug</a>
-    ·
-    <a href="">Request Feature</a>
+    <a href="https://github.com/katsumi-axis/swiftui-components/issues">Request Feature</a>
   </p>
 </div>
